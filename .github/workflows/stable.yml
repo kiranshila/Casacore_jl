@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-    tags: '*'
+    tags: "*"
 jobs:
   test:
     name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }} - ${{ github.event_name }}
@@ -13,9 +13,10 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - '1.8'
-          - '1.9'
-          - '1.10'
+          - "1.8"
+          - "1.9"
+          - "1.10"
+          - "1.11"
         os:
           - ubuntu-latest
         arch:
@@ -23,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: 'v0.3.0'
+          ref: "v0.3.0"
       - uses: julia-actions/setup-julia@v1
         with:
           version: ${{ matrix.version }}

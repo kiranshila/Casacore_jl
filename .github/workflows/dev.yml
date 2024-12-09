@@ -2,8 +2,8 @@ name: Dev
 on:
   pull_request:
   push:
-    branches: '*'
-    tags: '*'
+    branches: "*"
+    tags: "*"
 jobs:
   test:
     name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }} - ${{ github.event_name }}
@@ -12,9 +12,10 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - {name: '1.8', version: '1.8'}
-          - {name: '1.9', version: '1.9'}
-          - {name: '1.10', version: '1.10'}
+          - { name: "1.8", version: "1.8" }
+          - { name: "1.9", version: "1.9" }
+          - { name: "1.10", version: "1.10" }
+          - { name: "1.11", version: "1.11" }
         os:
           - ubuntu-latest
         arch:
