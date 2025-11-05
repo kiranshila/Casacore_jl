@@ -13,8 +13,8 @@ casacorecxx_jll = "689e2960-4160-5310-ae7f-2d2095288874"
 [compat]
 casacorecxx_jll = "0.4.0"
 CEnum = "0.5"
-CxxWrap = "0.16"
-julia = "1.9"
+CxxWrap = "0.17"
+julia = "1.10"
 Unitful = "1"
 
 [extras]
